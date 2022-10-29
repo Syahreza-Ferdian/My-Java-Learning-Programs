@@ -11,11 +11,11 @@ public class menentukanKPK {
         int bilangan1 = Integer.parseInt(input1);
         int bilangan2 = Integer.parseInt(input2);
         int kpk = (bilangan1 > bilangan2) ? bilangan1 : bilangan2;
-
-        while(true){
+        boolean isKPK = false;
+        while(isKPK == false){
             if(kpk % bilangan1 == 0 && kpk % bilangan2 == 0){
                 System.out.printf("Nilai KPK dari %d dan %d adalah %d", bilangan1, bilangan2, kpk);
-                break;
+                isKPK = true;
             }
             else kpk++;
         }
