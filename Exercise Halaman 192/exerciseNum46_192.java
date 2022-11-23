@@ -5,12 +5,12 @@ public class exerciseNum46_192 {
     public static void main(String[] args) {
         System.out.print("Enter a string: ");
         String input = scanner.nextLine();
-        String konversi = "", hasil = "";
+        String perKarakter, hasil = "";
         int panjangInput = input.length();
 
         for(int i = 0; i < panjangInput; i++){
-            konversi = input.substring(i, i+1);
-            hasil = konversi + hasil;
+            perKarakter = input.substring(i, i+1);
+            hasil = perKarakter + hasil;
         }
         System.out.printf("The reversed string is %s", hasil);
     }
