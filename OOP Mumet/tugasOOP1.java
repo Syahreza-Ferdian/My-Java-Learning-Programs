@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class tugasOOP1_Alt {
+public class tugasOOP1 {
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.print("Masukkan panjang jari jari lingkaran: ");
