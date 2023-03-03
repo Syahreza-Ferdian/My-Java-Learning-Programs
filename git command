@@ -1,0 +1,6 @@
+Urutan cmd git di Terminal buat commit dan push salah satu file ke repository github
+    1. git add [NAMA_FILE.java] . Jika ada package, tambahkan nama package di depannya, mis [PACKAGE/NAMA_FILE.java]
+    2. git commit -m "PESAN COMMIT" [NAMA_FILE] . ketentuan penamaan file sama spt nomor 1.
+    3. git push (Jika git push tidak bisa, pake git push -f. )
+
+SELESAI

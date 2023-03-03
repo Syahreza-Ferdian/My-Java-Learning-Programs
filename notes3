@@ -1,0 +1,42 @@
+OPERATING SYSTEM
+
+Os as Resource Manager
+Uniprogrammming --> pada satu waktu hanya mengerjakan satu job saja. program diselesaikan sampai selesai, baru mengerjakan program selanjutnya
+Multiprogramming --> program pertama idle, bisa mengerjakan program kedua. begitupun seterusnya.
+
+Time-sharing systems --> seluruh alokasi waktu dibagi ke seluruh user
+
+Short-term scheduling --> CPU menjalankan 1 batch, sifatnya jangka pendek, waktunya sangat cepat. melibatkan beberapa batch
+Medium=term scheduling --> ketika sudah mengerjakan lebih dari 1 batch/melibatkan lebih dari 1 proses. 
+Long-term scheduling --> melibatkan lebih dari 1 user.
+
+Swapping --> meletakkan memory pada tempat cadangan pada storage
+
+Paging
+ - Memory Overlay
+ - Virtual Memory
+
+Translation Lookaside Buffer --> menerjemahkan virtual memory ke main memory
+
+Segmentation
+
+Cara Konversi Decimal number ke biner:
+0.234 decimal = ? biner
+
+0.234 x 2 = 0.468
+0.468 x 2 = 0.936
+0.036 x 2 = 1.87200
+0.8720 * 2 = 1.744
+0.744 * 2 = 1.488
+// 0.488 * 2 = 0.976
+// 0.976 * 2 = 1.952
+// 0.952 * 2 = 1.904
+
+0.00111
+
+0.00111 ke decimal
+  12345
+
+= (0*2^-1) + (0*2^-2) + (1*2^-3) + (1*2^-4) + (1*2^-5)
+= 1/8 + 1/16 + 1/32 = 7/32 = 0.21875 --> hasil
+

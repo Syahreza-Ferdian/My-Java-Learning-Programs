@@ -1,0 +1,14 @@
+Sistem operasi menyimpan instruction(perintah), disimpan di storage. instruction tersebut nantinya dijalankan oleh CPU.
+Sistem operasi mengirimkan instruction kepada seluruh perangkan yang membutuhkan, disebut booting
+
+Aplikasi (software) bergantung pada operating system
+         Operating system bersifat sebagai induk/basis bagi Aplikasi (software)
+
+Tugas sistem operasi:
+    1. Menyimpan instruction
+    2. Memberikan interface (memudahkan user menggunakan sistem operasi) --> GUI (Graphical User Interface)
+
+Application Programming Interface (API)
+Applicaiton Binary Interface (ABI)
+Instruction Set Architecture 
+

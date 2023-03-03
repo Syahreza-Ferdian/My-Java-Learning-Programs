@@ -19,7 +19,7 @@ public class arrayTugas2 {
             switch(pilihanUser){
                 case 1: {
                     System.out.println("Daftar Kereta Api: ");
-                    for(int i = 0; i < 4; i++){
+                    for(int i = 0; i < data.length; i++){
                         System.out.printf("%d. %s\n", i+1, data[i][0]);
                     }
                     break;
@@ -27,7 +27,7 @@ public class arrayTugas2 {
                 case 2: {
                     int count = 0;
                     System.out.println("Daftar Kereta Api yang ada AC-nya: ");
-                    for(int i = 0; i < 4; i++){
+                    for(int i = 0; i < data.length; i++){
                         if(data[i][3].equalsIgnoreCase("ada")) {
                             count++;
                             System.out.printf("%d. %s\n", count, data[i][0]);
@@ -38,7 +38,7 @@ public class arrayTugas2 {
                 case 3: {
                     int count = 0;
                     System.out.println("Daftar Kereta Api yang ada colokannya: ");
-                    for(int i = 0; i < 4; i++){
+                    for(int i = 0; i < data.length; i++){
                         if(data[i][4].equalsIgnoreCase("ada")) {
                             count++;
                             System.out.printf("%d. %s\n", count, data[i][0]);
@@ -54,7 +54,7 @@ public class arrayTugas2 {
                         System.out.print("Masukkan jumlah tiket yang ingin anda pesan: ");
                         jumlahTiket = scanner.nextInt();
                         System.out.printf("Anda telah berhasil memesan kereta %s dengan jumlah tiket %d\n", data[rowKeretaYangDipesan(pesanKereta, data)][0], jumlahTiket);
-                        System.out.println("TIPS: Input 5 jika ingin melihat pesanan anda.");
+                        System.out.println("NOTE: Input 5 jika ingin melihat pesanan anda.");
                     }
                     break;
                 }
@@ -79,7 +79,7 @@ public class arrayTugas2 {
     }
     public static int rowKeretaYangDipesan(String pesan, String[][] data){
         int indexKereta = -1;
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < data.length; i++){
             if(data[i][0].equalsIgnoreCase(pesan)) indexKereta = i;
         }
         return indexKereta;

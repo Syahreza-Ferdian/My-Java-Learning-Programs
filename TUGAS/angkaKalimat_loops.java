@@ -8,7 +8,7 @@ public class angkaKalimat_loops {
         String[] ANGKA_TERBILANG = {"Triliun", "Milyar", "Juta", "Ribu", "Ratus", "Sembilan Puluh", "Delapan Puluh", "Tujuh Puluh", "Enam Puluh", "Lima Puluh", "Empat Puluh", "Tiga Puluh", "Dua Puluh",
                                     "Sembilan Belas", "Delapan Belas", "Tujuh Belas", "Enam Belas", "Lima Belas", "Empat Belas", "Tiga Belas", "Dua Belas", "Sebelas", "Sepuluh",
                                     "Sembilan", "Delapan", "Tujuh", "Enam", "Lima", "Empat", "Tiga", "Dua", "Satu"};
-
+                                                                                                
         String hasil = "";
         for (int i = 0; i < ANGKA_CAST.length; i++) {
             if (ANGKA_CAST[i] <= bilangan) {

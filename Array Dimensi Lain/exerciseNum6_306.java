@@ -40,13 +40,13 @@ public class exerciseNum6_306 {
     }
     public static double[][] kalikanMatriks(double[][] matriks1, double[][] matriks2){
         double[][] perkalian = new double[3][3];
-        for(int i = 0; i < matriks1.length; i++){
-            for(int j = 0; j < matriks1[i].length; j++){
+        for(int baris = 0; baris < matriks1.length; baris++){
+            for(int kolom = 0; kolom < matriks1[baris].length; kolom++){
                 double penjumlahan = 0;
-                for(int k = 0; k < matriks1[i].length; k++){
-                    penjumlahan += matriks1[i][k] * matriks2[k][j];
+                for(int i = 0; i < matriks1[baris].length; i++){
+                    penjumlahan += matriks1[baris][i] * matriks2[i][kolom];
                 }
-                perkalian[i][j] = penjumlahan;
+                perkalian[baris][kolom] = penjumlahan;
             }
         }
         return perkalian;

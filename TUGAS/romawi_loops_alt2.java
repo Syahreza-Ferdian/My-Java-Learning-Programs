@@ -8,14 +8,20 @@ public class romawi_loops_alt2 {
         String hasil = "";
         System.out.print("Masukkan sebuah bilangan integer: ");
         int bilangan = scanner.nextInt();
-
-        for(int i = 1; i <= 13; i++){
-            while(bilangan - angkaSpesial(i) >= 0){
-                hasil += romawi(i);
-                bilangan -= angkaSpesial(i);
+        if(!(bilangan <= 0 || bilangan > 3999)){
+            for(int i = 1; i <= 13; i++){
+                while(bilangan - angkaSpesial(i) >= 0){
+                    hasil += romawi(i);
+                    bilangan -= angkaSpesial(i);
+                }
             }
+            System.out.println(hasil);
         }
-        System.out.println(hasil);
+        else {
+            System.out.println("Angka di luar range!. Masukkan lagi di bawah!");
+            System.out.println();
+            main(args);
+        }
     }   
     public static String romawi(int countRomawi){
         String romawi = "";

@@ -1,0 +1,42 @@
+Combinatorial --> Mathematic branchs to count the number of arrangements of objects without having to enumerate
+                all possible arrangemenents.
+
+Rules of Counting:
+    1. Rule of Sum --> aturan penjumlahan --> Percobaan berupa object 
+        --> kata kunci: memperebutkan satu ruang (ex. memperebutkan satu kursi ketua BEM).
+    2. Rule of Product --> aturan perkalian --> percobaan berupa ruang
+        --> kata kunci: memperebutkan dua ruang (ex. berapa cara memilih dua orang perserta...).
+
+Expansion of rules:
+    Rule of Sum: 
+        p1 + p2 + .... + pn = results
+    Rule of Product:
+        p1 x p2 x ..... x pn = results
+
+Inclusion Exclusion Principle --> Kedua rule (rule of product dan rule of sum) digunakan secara bersamaan dalam satu operasi.
+
+Password pada sebuah sistem komputer panjangnya enam sampai delapan karakter. Tiap karakter boleh berupa huruf atau angka, case sensitif. Berapa banyak kombinasi password yang dapat dibuat.
+    = (62 ^ 6) + (62 ^ 7) + (62 ^ 8)
+
+Berapa banyak kombinasi susunan byte yang dimulai dengan '11' atau berakhir dengan '11'?
+    A           : 1 x 1 x 2 x 2 x 2 x 2 x 2 x 2 = 1 x 2^6 = 64
+    B           : 2 x 2 x 2 x 2 x 2 x 2 x 1 x 1 = 1 x 2^6 = 64
+    A irisan B  : 1 x 1 x 2 x 2 x 2 x 2 x 1 x 1 = 1 x 2^4 = 16
+    A gabungan B = |A| + |B| - |A irisan B|
+                    64 + 64 - 16 = 112
+
+Permutasi --> pengaturan objek dengan memperhitungkan urutan
+Permitasi n obyek: --> Object sejumlah n, ruangannya juga sejumlah n, maka kemungkinannya adalah n!.
+Permutasi r dari n elemen: P(n, r) = n!/(n-r)!
+
+Kombinasi --> pengaturan objek tanpa memperhitungkan urutan.
+C(n, r) = n!/((n - r)! * r!)
+
+PHP (Pigeon Hole Principle) --> Ada ruang, namun objeknya lebih banyak dari pada ruangnya. Paling tidak satu tempat berisi lebih dari 1 objek.
+
+
+Buat hint nanti kalian pelajari:
+- Reverse suatu string / angka
+- Parsing integer to string atau string to integer
+- Input menggunakan spasi dan enter
+- Method

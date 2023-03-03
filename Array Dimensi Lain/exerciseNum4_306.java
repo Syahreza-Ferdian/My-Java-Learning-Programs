@@ -18,7 +18,13 @@ public class exerciseNum4_306 {
             }
             output[baris] = String.format("Jam kerja pegawai %d adalah %d", baris, jamKerjaPegawai[baris]);
         }
+        String[] arrayDuplicate = new String[output.length];
+        System.arraycopy(output, 0, arrayDuplicate, 0, output.length);
+        for (String string : arrayDuplicate) {
+            System.out.println(string);
+        }
         sort(output);
+        System.out.println();
         for (String string : output) {
             System.out.println(string);
         }
@@ -38,22 +44,7 @@ public class exerciseNum4_306 {
                 }
             }
         }
-        // for(int i = 0; i < array.length; i++){
-        //     System.out.println(array[i]);
-        // }
     }
-    // public static void urutkan(int[] array){
-    //     for(int i = 0; i < array.length; i++){
-    //         for(int j = i + 1; j < array.length; j++){
-    //             int temp;
-    //             if(array[i] < array[j]){
-    //                 temp = array[i];
-    //                 array[i] = array[j];
-    //                 array[j] = temp;
-    //             }
-    //         }
-    //     }
-    // }
 }
 /*
 Jam kerja pegawai 2 adalah 20

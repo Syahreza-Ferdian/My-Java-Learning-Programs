@@ -1,24 +1,22 @@
 public class exerciseNum26_234 {
     public static void main(String[] args) {
         System.out.println("Palindromic Prime adalah bilangan prima yang juga palindrome\nBerikut ini adalah 100 bilangan Palindrome yang pertama: ");
-        int countDisplay = 0;
-        int i = 2;
-        while (countDisplay < 100) {
+        int tampil = 0;
+        int i = 2; 
+        while (tampil < 100) {
             if(afakahPrima(i) && afakahPalindrome(i)){
-                countDisplay++;
+                tampil++;
                 System.out.printf("%d ", i);
-                if(countDisplay % 10 == 0) System.out.println();
+                if(tampil % 10 == 0) System.out.println();
             } 
             i++;
         }
     }   
     public static boolean afakahPrima(int angka){
-        int hitung = 0;
-        for(int i = 1; i <= angka; i++){
-            if(angka % i == 0) hitung++;
+        for(int i = 2; i <= angka/2; i++){
+            if(angka % i == 0) return false;
         }
-        boolean cekPrima = (hitung == 2)?true:false;
-        return cekPrima;
+        return true;
     }
     public static boolean afakahPalindrome(int angka){
         String konversi = String.valueOf(angka);

@@ -1,0 +1,41 @@
+============>>>>>> METHOD and FUNCTION <<<<<<==============
+Pemrograman Modular --> Program utama dibagi menjadi modul-modul yang lebih kecil. Sehingga modifikasi dapat dilakukan
+                        tanpa menganggu program secara keseluruhan. Modul-modul tersebut bersifat reusable.
+Lingkup methode --> public, private, default, dsb..
+                    public --> bisa diakses dari file lain. (tidak harus dalam file yang sama).
+                    private --> tidak bisa diakses dari file lain (hanya untuk file di mana method tersebut berada)
+Method Static --> Bisa dipanggil secara saat program dijalankan, karena sudah ada di memori.
+Variable Static --> Akan selalu berada di memori selama program tersebut dijalankan. (Nilainya akan selalu bersifat global)
+Return --> Hanya berlaku apabila method tersebut ingin menghasilkan nilai. Keluaran nilai tersebut dapat digunakan pada 
+            modul lain. Apabila VOID (public static void ...), maka tidak menghasilkan nilai (tidak ada nilai yang dikirimkan keluar).
+            Apabila (public static int ...) maka harus return sebuah nilai integer.
+            
+Local Variable --> variabel yang dideklarasikan di dalam method, dan hanya berlaku di dalam method tersebut.
+Global Variable --> variable yang bisa digunakan di semua method. Namun, membutuhkan memori yang lebih besar.
+
+Method Rekursif --> Method nya dipanggil berulang kali di dalam method tersebut namun dengan parameter yang berbeda
+
+
+=======>>>> ARRAY <<<<===========
+Array adalah suatu tipe data yang memungkinkan kita menyimpan tipe data majemuk (lebih dari satu data, namun dengan data yang harus sama/homogen (misal semua harus integer, dsb)).
+             sehingga memungkinkan untuk diolah secara berkelompok. Array bisa diakses langsung ke elemen tertentu dengan memanggil indeksnya.
+Array = matriks, punya elemen dan indeks. Pada kebanyakan bahasa pemrograman, indeks pada array dimulai dari 0.
+Deklarasi dan Intansiasi Array:
+    int a[] = new int[n]; n = berapa banyak array nya bisa menampung nilai. limit nya tak terhingga tergantung jumlah memori.
+    Ketika array dideklarasikan, maka array akan langsung mengambil tempat di memory meskipun dia kosong/belum diisi.
+Mengisi data pada array tidak harus urut dari indeks 0. Bisa dimulai dari indeks mana saja.
+Jika array tidak diberi nilai, maka automatis diberi nilai 0.
+Mengetahui kapasitas dari array:
+    namaVariableArray.length; --> properties length
+Array Multidimensi:
+    Array Dimesi dua --> memiliki indeks menyerupai baris dan kolom pada tabel.
+    Pada java, array dua dimensi tidak harus simetris. (Jumlah kolom dan baris bisa berbeda, tidak harus sama). 
+        --> Misal baris ke-0 berisi 2 kolom, sedangkan baris ke-1 berisi 3 kolom.
+    Jumlah dimensi ditentukan berdasarkan banyaknya "[]" pada saat deklarasi array tersebut.
+
+2 4 7 10 11 45 50 59 60 66 69 70 79 --> array
+0 1 2  3  4  5  6  7  8  9 10 11 12  --> index
+
+
+
+
