@@ -1,4 +1,6 @@
 //domain 
+import java.util.Scanner;
+
 class Car{
     //Constructor = kelas yang akan selalu dipanggil pertama kali(default) pada saat obj dibuat ketika menggunakan objek, pembeda dari kelas yang lain
     public String noPol = "";
@@ -24,30 +26,49 @@ class Car{
     }
 }
 class PetrolCar extends Car{
-    public int kapasitasBBM = 50;
+    public int kapasitasBBM;
     public int isiTangkiBBM = 0;
+    Scanner scanner = new Scanner(System.in);
 
-    public PetrolCar(String noPol, String namaMobil, int seat, int isiTangkiBBM){
+    public PetrolCar(String noPol, String namaMobil, int seat, int isiTangkiBBM, int kapasitasTanki){
         super(noPol, namaMobil, seat);
         this.isiTangkiBBM = isiTangkiBBM;
+        kapasitasBBM = kapasitasTanki;
     }
-    public void isiBBM(int beliBerapa){
+    public void isiBBM(){
+        System.out.printf("Memulai pengisian BBM untuk mobil %s\n", namaMobil);
+        System.out.print("Masukkan jumlah BBM dalam liter: ");
+        int beliBerapa = scanner.nextInt();
         isiTangkiBBM += beliBerapa;
-        System.out.printf("Berhasil membeli bensin untuk %s sebanyak %d liter! Isi tanki sekarang %d liter\n", namaMobil, beliBerapa, isiTangkiBBM);
+        if(isiTangkiBBM > kapasitasBBM){
+            System.out.printf("ERROR: Melebihi kapasitas tanki BBM. Kapasitas tangki %d liter\n", kapasitasBBM);
+            isiTangkiBBM -= beliBerapa;
+            isiBBM();
+        }
+        else System.out.printf("Berhasil membeli bensin untuk %s sebanyak %d liter! Isi tanki sekarang %d liter\n", namaMobil, beliBerapa, isiTangkiBBM);
     }
 }
 
 class ElectricCar extends Car{
-    public int dayaListrik = 200;
+    public int dayaListrik;
     public int sisaEnergiListrik = 0;
-
-    public ElectricCar(String noPol, String namaMobil, int seat, int sisaEnergiListrik){
+    Scanner scanner = new Scanner(System.in);
+    public ElectricCar(String noPol, String namaMobil, int seat, int sisaEnergiListrik, int kapasitasDaya){
         super(noPol, namaMobil, seat);
         this.sisaEnergiListrik = sisaEnergiListrik;
+        dayaListrik = kapasitasDaya;
     }
-    public void isiKwh(int beliBerapa){
+    public void isiKwh(){
+        System.out.printf("Memulai pengisian KWH untuk mobil %s\n", namaMobil);
+        System.out.print("Masukkan jumlah KWH yang ingin anda isikan: ");
+        int beliBerapa = scanner.nextInt();
         sisaEnergiListrik += beliBerapa;
-        System.out.printf("Berhasil mengisi KwH untuk %s sebanyak %d KwH! Total KwH sekarang %d\n", namaMobil, beliBerapa, sisaEnergiListrik);
+        if(sisaEnergiListrik > dayaListrik){
+            System.out.printf("ERROR: Melebihi kapasitas daya KWH mobil. Kapasitas KWH %d\n", dayaListrik);
+            sisaEnergiListrik -= beliBerapa;
+            isiKwh();
+        }
+        else System.out.printf("Berhasil mengisi KwH untuk %s sebanyak %d KwH! Total KwH sekarang %d\n", namaMobil, beliBerapa, sisaEnergiListrik);
     }
 }
 
@@ -65,12 +86,12 @@ public class OOPManeh {
         angkot2.maju();
         angkot2.mundur();
 
-        PetrolCar mobil1 = new PetrolCar("K 123 ZA", "Innova Reborn", 7, 30);
-        mobil1.isiBBM(20);
+        PetrolCar mobil1 = new PetrolCar("K 123 ZA", "Innova Reborn", 7, 40, 55);
+        mobil1.isiBBM();
         mobil1.maju();
 
-        ElectricCar mobil2 = new ElectricCar("K 4444 JI", "Toyota Prius", 5, 20);
-        mobil2.isiKwh(20);
+        ElectricCar mobil2 = new ElectricCar("K 4444 JI", "Toyota Prius", 5, 60, 100);
+        mobil2.isiKwh();
         mobil2.mundur();
     }
     
